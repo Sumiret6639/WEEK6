@@ -1,0 +1,117 @@
+.banner{
+    display: flex;
+    margin-top: m(-3.5);
+
+    .container-fluid{
+        position: relative;
+        padding: 0;
+    }
+
+    .banner-text{
+        margin-top: p(14.75);  
+        margin-bottom: p(14.75);  
+
+        @include phone{
+            margin-bottom: 0;
+        }
+
+        h5{
+            @include phone{
+                color: $white-light;
+                margin-bottom: 108px;
+            }
+            
+        }
+
+        h1{
+            @include phone{
+                color: #fff;
+            }
+            
+        }
+    }
+
+    .banner-img{
+        position: absolute;
+        top: 0;
+        bottom: 45px;
+        right: 0;
+        background-image: url('../images/index-1.jpg');
+        background-size: cover;
+        background-position: center center;
+
+        @include phone{
+            bottom: 84px;
+        }
+    }
+
+    .banner-button{
+        @include green-button(18px,45px);
+    }
+}
+
+.media{
+
+    &:nth-child(2n){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.craft{
+    background-image: url('../images/index-5.jpg');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+
+
+    &-title{
+        color: #fff;
+
+        @include phone{
+            margin-bottom: 125px;
+        }
+    }
+
+    &-body{
+        h5{
+            color: $white-light;
+            @include font(1);
+        }
+
+        h3{
+            color: #fff;
+            @include font(1.5);
+        }
+
+        h3{
+            @include font(0.875);
+        }
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide{
+    width: 350px !important;
+}
+
+.card{
+    position: relative;
+    &::before{
+        position: relative;
+        top: 24px;
+        left: 81%;
+        display: block;
+        content: "On Sale";
+        font-size: 14px;
+        width: 48px;
+        height: 16px;
+        color: #fff;
+    }
+
+}
+

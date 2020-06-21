@@ -1,0 +1,139 @@
+//變數
+$green: #0E8A00;
+$black: #121212;
+$gray-dark: #0000009A;
+$gray: #00000062;
+$gray-light: #F2F2F2;
+$white-light: #FFFFFF99;
+$base_size: 16px;
+
+//function
+@function fontLevel($level: 1){
+    @return $base_size * $level
+};
+
+@function m($level: 1){
+    @return $base_size * $level
+};
+
+@function p($level: 1){
+    @return $base_size * $level
+};
+
+@mixin link-item {
+    // color: $black;
+    font-style: bold;
+    @include font(1.5);
+    cursor: pointer;
+
+    &:hover{
+        color: $green;
+        font-weight: 700;;
+    }
+}
+
+//mixin
+@mixin font($level: 1) {
+    font-size:  fontLevel($level);
+    line-height: 1.5;
+};
+
+@mixin green-button ($px: 20px, $py: 44px){
+    appearance: none;
+    border: 0;
+    padding: $px $py;
+    color: #fff;
+    font-style: bold;
+    text-align: center;
+    background-color: $green;   
+    border-radius: 0px 4px 4px 0px;
+}
+
+//media query
+@mixin pad{
+    @media (min-width: 768px) and (max-width: 992px) {
+        @content
+    }
+};
+
+@mixin phone{
+    @media (max-width: 767px) {
+        @content
+    }
+};
+
+// @mixin iphone{
+//     @media (max-width: 320px) {
+//         @content
+//     }
+// };
+
+// 自訂
+
+.text-green{
+    color: $green;
+}
+
+.txt-white{
+    color: #fff;
+}
+
+.txt-black{
+    color: $black;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.flex-column-jcc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-h-350{
+    height: 350px;
+    object-fit: cover;
+}
+
+.bg-gray{
+    background-color: $gray-light;
+}
+
+.py-72{
+    padding: p(4.5) 0;
+}
+
+.mb-24{
+    margin-bottom: m(1.5);
+}
+
+.mb-48{
+    margin-bottom: m(3);
+}
+
+.mb-72{
+    margin-bottom: m(4.5);
+}
+
+.mr-48{
+    margin-right: m(3);
+}
+
+.mr-16{
+    margin-right: m(1);
+}
+
+
+.pad-mb-48{
+    @include pad{
+        margin-bottom: m(3);
+    }
+}
+
+.pad-mb-16{
+    @include pad{
+        margin-bottom: m(1);
+    }
+}

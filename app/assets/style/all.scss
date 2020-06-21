@@ -1,0 +1,27 @@
+@import "functions";
+@import "./helpers/utility";
+@import "./helpers/variables";
+@import "bootstrap";
+
+//base
+@import "./base";
+
+//layout
+@import "./layout/layout";
+
+//pages
+@import "./pages/index";
+@import "./allProduct";
+
+//全域
+
+
+@media only screen and (max-width: 768px) {
+    .card-columns {
+        column-count: 2 !important;
+    }
+    .card-columns .card img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+}

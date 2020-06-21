@@ -1,0 +1,208 @@
+.logo{
+    font-size: 24px;
+    line-height: 30px;
+    color: $black;
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Raleway';
+}
+
+.logo-index {
+    font-size: 24px;
+    line-height: 30px;
+    color: $black;
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Raleway';
+
+    @include phone{
+        color: #fff;
+    }
+}
+
+.navbar-custom{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.nav-custom{
+    display: flex;
+
+    @include pad{
+        display: -webkit-box;
+    };
+}
+
+.bar-link-custom{
+    @include link-item;
+    @include font(1);
+}
+
+.nav-link-custom{
+    padding: p(0.75);
+    @include link-item;
+    color: $gray-dark;
+
+    @include pad{
+        @include font(1);
+    };
+
+    @include phone{
+        @include font(1);
+    }
+}
+
+.subscribe-block{
+    background-image: url('../images/footer.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: p(5.25) 0;
+
+    h1{
+        @include font(3);
+        color: #fff;
+        margin-bottom: m(3);
+
+        @include phone{
+            @include font(2);
+        };
+    }
+
+    input{
+        background-color: transparent;
+        border: 1px solid #F2F2F2;
+        padding: p(1);
+
+        &:focus{
+            outline: none;
+        }
+
+        @include phone{
+            width: 63%;
+        }
+    }
+
+    button{
+        @include green-button;
+        
+
+        &:focus{
+            outline: none;
+        }
+
+        @include phone{
+            width: 35%;
+            padding: p(1) p(1.5);
+        }
+    }
+
+    @include pad{
+        padding: p(1.5) p(1);
+
+        h1{
+            @include font(2);
+            margin-bottom: m(1.5);
+        };
+
+        .submit-email{
+            display: flex;
+        }
+    };
+
+    @include phone{
+        padding: p(1.5) 0;
+    }
+}
+
+.card{
+    border: 0;
+
+    h5{
+        margin-bottom:  m(0.25);
+    }
+
+    &-body{
+        padding: p(0.5) 0;
+    }
+
+    .price{
+        display: flex;
+
+        &-sale{
+            margin-right: m(0.5);
+        }
+
+        &-origin{
+            color: $gray
+        }
+    }
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+
+    &-link{
+        color: $black;
+        padding: 0 p(1);
+        margin: m(4.5) 0;
+
+        &:hover{
+            color: $green;
+        }
+
+        @include phone{
+            margin: m(3) 0;
+        }
+    }
+}
+
+.footer{
+    background-color: $black;
+    color: #fff;
+    // padding: p(2) p(5.25);
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+
+    h5{
+        line-height: 1;
+    }
+
+    .logo{
+        color: #fff;
+    }
+
+    .copyright{
+        display: flex;
+        align-items: center;
+    }
+
+    // .policy{
+    //     display: flex;
+    // }
+
+    // &-bottom{
+    //     padding: p(2) p(5.25);
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    // }
+
+    @include pad{
+        padding-bottom: p(1.5) 0;        
+
+        &,.copyright, .policy{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .copy{
+            order: 3;
+        }
+    };
+}
+
+
+
+
